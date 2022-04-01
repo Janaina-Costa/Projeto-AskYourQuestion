@@ -1,0 +1,118 @@
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 11.4rem 1fr;
+      grid-template-rows: 11.4rem 1fr;
+  height: 90vh;
+      grid-template-areas: 'header header' 'left right';
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+#bg {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
+  background: url("../assets/images/imgilustracao.svg") no-repeat top/contain;
+  background-position-x: -10rem;
+}
+
+.ball {
+  width: 21.2rem;
+  height: 21.2rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  background: var(--blue);
+  position: fixed;
+  opacity: 0.1;
+}
+
+.ball.top {
+  top: -35.85rem;
+  right: -44.5rem;
+  width: 63.3rem;
+  height: 63.3rem;
+}
+
+.ball.bottom {
+  bottom: -15rem;
+  right: 5.6rem;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container {
+  width: Min(36.3rem, 100%);
+}
+
+main h2 {
+  color: var(--black);
+  font-size: clamp(20px, 5vw, 2.8rem);
+  margin-bottom: 2.4rem;
+}
+
+main input {
+  border: 0.2rem solid var(--grey-blue);
+  padding: 0 1.6rem;
+}
+
+main a.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1.6rem;
+  font-size: 1.4rem;
+}
+
+main input, main button, main .btn {
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+main .separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 0;
+}
+
+main .separator div:nth-child(1),
+main .separator div:nth-child(3) {
+  background: var(--grey-blue);
+  width: 100%;
+  height: 1px;
+}
+
+main .separator div:nth-child(2) {
+  color: var(--grey-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding: 0 1.35rem;
+}
+/*# sourceMappingURL=home.css.map */
